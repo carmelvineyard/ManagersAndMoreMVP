@@ -33,6 +33,8 @@ In the meantime, and when I am done, all one should need to use this code for th
 3. Save file as .htm
 4. Open file using Chrome (the only browser I've used so far)
 
+[Or to just see it...](https://carmelvineyard.github.io/ManagersAndMoreMVP/managersAndMoreMVP.htm)
+
 Final note: as of 2/6/2020, I do not have the state of the buttons being saved into local storage, nor do I really plan to. Also, I suspect this readme is now longer than the actual code.
 
 
