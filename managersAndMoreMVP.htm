@@ -35,8 +35,13 @@
                 }
                 
                 .here {
-                  background-color: #00755e;
+                  background-color: #ceb888;
+		  color: #2c2a29;
                 }
+
+		.notHere {
+		  background-color: #782f40;
+		}
 
 		.flex-container {
   		  display: flex;
@@ -59,11 +64,17 @@
          <script>
 		
               function changeColor(target) {
+		console.log =  target.class;
+		//if target.class = 
               	var here = document.getElementById(target);
 		here.classList.toggle("here");
 	      }
 
-
+	      function makeItGarnet(target) {
+		var notHere = document.getElementById(target);
+		notHere.classList.toggle("notHere");
+	      }
+		
 
               
          </script>
@@ -73,20 +84,26 @@
 <body>
 	
 	
-	    <div class = "flex-container">
+	    <div class = "flex-container" id = "button-bank">
+
 		<h2>Managers and More</h2>
+
+		<p>Single click to mark a person here- if you send a call to them, you're golden.<br>
+		Double click to mark a person Definitely Not Here- red is a warning not to send any calls to them!
+		</p>
+
 		<div>
 	
-			<button id = "mustard" onclick = "changeColor(this.id)">Mustard</button>
-			<button id = "white" onclick = "changeColor(this.id)">White</button>
-			<button id = "peacock" onclick = "changeColor(this.id)">Peacock</button>
-			<button id = "plum" onclick = "changeColor(this.id)">Plum</button>
-			<button id = "gray" onclick = "changeColor(this.id)">Gray</button>
-			<button id = "brunette" onclick = "changeColor(this.id)">Brunette</button>
-			<button id = "peach" onclick = "changeColor(this.id)">Peach</button>
-			<button id = "scarlet" onclick = "changeColor(this.id)">Scarlet</button>
-			<button id = "rose" onclick = "changeColor(this.id)">Rose</button>
-			<button id = "green" onclick = "changeColor(this.id)">Green</button>
+			<button id = "mustard" onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Mustard</button>
+			<button id = "white" onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">White</button>
+			<button id = "peacock" onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Peacock</button>
+			<button id = "plum" onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Plum</button>
+			<button id = "gray" onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Gray</button>
+			<button id = "brunette" onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Brunette</button>
+			<button id = "peach" onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Peach</button>
+			<button id = "scarlet" onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Scarlet</button>
+			<button id = "rose" onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Rose</button>
+			<button id = "green" onclick = "changeColor(this.id)" ondblclick = "makeItGarnet(this.id)">Green</button>
 		</div>
 	    </div>
 	
